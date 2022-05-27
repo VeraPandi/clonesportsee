@@ -23,12 +23,12 @@ const CustomToolTip = ({ active, payload }) => {
    return null;
 };
 
-const DailyActivityChart = (data) => {
+const BarsChart = (data) => {
    return (
-      <section className="dailyActivityChart">
+      <div className="bar-chart">
          <h3>Activité quotidienne</h3>
 
-         <ResponsiveContainer width="195%" height="100%" aspect={4}>
+         <ResponsiveContainer width="100%" height="100%" aspect={4}>
             <BarChart
                width={500}
                height={350}
@@ -95,8 +95,8 @@ const DailyActivityChart = (data) => {
                />
             </BarChart>
          </ResponsiveContainer>
-      </section>
+      </div>
    );
 };
 
-export default DailyActivityChart;
+export default BarsChart;

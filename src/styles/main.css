@@ -87,6 +87,9 @@ body {
   color: #fff;
 }
 
+.titles {
+  margin-bottom: 80px;
+}
 .titles h1,
 .titles h2 {
   display: inline-block;
@@ -107,7 +110,7 @@ body {
 }
 
 /* Component */
-.dailyActivityChart {
+.bar-chart {
   max-height: 320px;
   max-width: 835px;
   padding: 25px 0;
@@ -134,11 +137,12 @@ body {
 }
 
 /* Chart title */
-.dailyActivityChart h3 {
+.bar-chart h3 {
   margin: 0;
   padding-left: 32px;
   font-size: 15px;
   font-weight: 500;
+  color: #20253a;
 }
 
 /* Abscissa line */
@@ -151,7 +155,97 @@ body {
   margin-top: -22px;
 }
 
+.card {
+  display: flex;
+  align-items: center;
+  height: 124px;
+  width: 258px;
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
+  background-color: #fbfbfb;
+}
+
+.card img {
+  width: 19px;
+}
+
+.fire-label {
+  margin-right: 4px;
+  margin-left: 32px;
+  padding: 17px 21px;
+  border-radius: 6px;
+  background-color: #fbeaea;
+}
+.fire-label img {
+  width: 18px;
+}
+
+.chicken-label {
+  margin-right: 4px;
+  margin-left: 32px;
+  padding: 18px 20px;
+  border-radius: 6px;
+  background: rgba(74, 184, 255, 0.1);
+}
+.chicken-label img {
+  width: 20px;
+}
+
+.apple-label {
+  margin-right: 4px;
+  margin-left: 32px;
+  padding: 17px 21px;
+  border-radius: 6px;
+  background-color: #fbf6e5;
+}
+
+.cheeseburger-label {
+  margin-right: 4px;
+  margin-left: 32px;
+  padding: 19px 21px;
+  border-radius: 6px;
+  background-color: #fbeaef;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+}
+
+.result span {
+  padding: 3.5px 22px;
+}
+
+.result-count {
+  font-size: 20px;
+  font-weight: 700;
+  color: #282d30;
+}
+
+.result-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #74798c;
+}
+
 .main {
-  display: inline-block;
   padding: 48px 90px 86px 226px;
+}
+
+.content {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.charts {
+  justify-self: stretch;
+  width: 835px;
+  margin-right: 15px;
+}
+
+.cards {
+  justify-self: stretch;
+  width: 100px;
+  margin-left: 15px;
 }/*# sourceMappingURL=main.css.map */

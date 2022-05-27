@@ -6,7 +6,7 @@ import bodybuilding from "../assets/icons/bodybuilding.png";
 
 const Sidebar = () => {
    return (
-      <section className="sidebar">
+      <aside className="sidebar">
          <ul>
             <li>
                <img src={yoga} alt="Icône du yoga" />
@@ -31,7 +31,7 @@ const Sidebar = () => {
          </ul>
 
          <span className="copyright">Copyright, SportSee 2020</span>
-      </section>
+      </aside>
    );
 };
 

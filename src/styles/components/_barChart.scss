@@ -1,5 +1,5 @@
 /* Component */
-.dailyActivityChart {
+.bar-chart {
    max-height: 320px;
    max-width: 835px;
    padding: 25px 0;
@@ -26,11 +26,12 @@
 }
 
 /* Chart title */
-.dailyActivityChart h3 {
+.bar-chart h3 {
    margin: 0;
    padding-left: 32px;
    font-size: 15px;
    font-weight: 500;
+   color: #20253a;
 }
 
 /* Abscissa line */

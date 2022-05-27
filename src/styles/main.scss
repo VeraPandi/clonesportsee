@@ -5,6 +5,7 @@
 @use "./components/navbar";
 @use "./components/sidebar";
 @use "./components/welcome";
-@use "./components/DailyActivityChart";
+@use "./components/barChart";
+@use "./components/card";
 
 @use "./pages/dashboard";
