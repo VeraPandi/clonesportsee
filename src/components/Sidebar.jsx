@@ -9,18 +9,28 @@ const Sidebar = () => {
       <section className="sidebar">
          <ul>
             <li>
-               <img src={yoga} alt="logo de SportSee" />
+               <img src={yoga} alt="Icône du yoga" />
             </li>
             <li>
-               <img src={swim} alt="logo de SportSee" />
+               <img
+                  className="swim-icon"
+                  src={swim}
+                  alt="Icône de la natation"
+               />
             </li>
             <li>
-               <img src={cycling} alt="logo de SportSee" />
+               <img
+                  className="cycling-icon"
+                  src={cycling}
+                  alt="Icône du cyclisme"
+               />
             </li>
             <li>
-               <img src={bodybuilding} alt="logo de SportSee" />
+               <img src={bodybuilding} alt="Icône de la musculation" />
             </li>
          </ul>
+
+         <span className="copyright">Copyright, SportSee 2020</span>
       </section>
    );
 };

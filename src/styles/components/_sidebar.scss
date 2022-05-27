@@ -1,18 +1,24 @@
 .sidebar {
+   z-index: -1;
+   position: absolute;
+   top: 0;
    width: 117px;
+   background-color: #000;
 }
 
 .sidebar ul {
    display: flex;
    flex-direction: column;
-   // align-items: center;
-   margin: 0;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: auto 0;
+   padding: 0;
    list-style: none;
-   background-color: #000;
 }
 
 .sidebar li {
-   width: 40px;
+   width: 34px;
    height: 34px;
    margin: 10px 0;
    padding: 14px;
@@ -22,6 +28,22 @@
 }
 
 .sidebar img {
-   width: 37px;
-   height: 31px;
+   width: 34px;
+}
+
+.sidebar li .swim-icon,
+.sidebar li .cycling-icon {
+   width: 36px;
+}
+
+.copyright {
+   position: absolute;
+   bottom: 11.42%;
+   right: -9%;
+   width: 140px;
+   transform: rotate(-90deg);
+   font-size: 12px;
+   font-style: normal;
+   font-weight: 500;
+   color: #fff;
 }

@@ -5,6 +5,7 @@ export function useData(id) {
    const [user, setUser] = useState([]);
    const [userInfo, setUserInfo] = useState([]);
    const [activity, setActivity] = useState([]);
+   const [activitySession, setActivitySession] = useState([]);
    const [average, setAverage] = useState([]);
    const [performance, setPerformance] = useState([]);
 
@@ -25,14 +26,16 @@ export function useData(id) {
             const userDatas = datas[0].data.data;
             const userInfoDatas = datas[0].data.data.userInfos;
             const activityDatas = datas[1].data.data;
+            const activitySessionsDatas = activityDatas.sessions;
             const averageDatas = datas[2].data.data;
             const performanceDatas = datas[3].data.data;
             setUser(userDatas);
             setUserInfo(userInfoDatas);
             setActivity(activityDatas);
+            setActivitySession(activitySessionsDatas);
             setAverage(averageDatas);
             setPerformance(performanceDatas);
-            // console.log(userInfo);
+            // console.log(activityDatas.sessions);
          })
       );
    };
@@ -42,5 +45,12 @@ export function useData(id) {
    }, []);
 
    //    console.log(info.firstName);
-   return { user, userInfo, activity, average, performance };
+   return {
+      user,
+      userInfo,
+      activity,
+      activitySession,
+      average,
+      performance,
+   };
 }

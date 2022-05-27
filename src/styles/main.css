@@ -5,6 +5,10 @@ body {
   font-family: "Roboto", "Montserrat", sans-serif;
 }
 
+#root {
+  position: relative;
+}
+
 .logo img {
   height: 61px;
 }
@@ -12,7 +16,8 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0 15px 30px;
+  padding: 17px 0 9px 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #000;
 }
 
@@ -26,26 +31,33 @@ body {
 .navbar a {
   display: flex;
   align-items: center;
-  text-decoration: none;
   font-size: 24px;
   font-weight: 500;
+  text-decoration: none;
   color: #fff;
 }
 
 .sidebar {
+  z-index: -1;
+  position: absolute;
+  top: 0;
   width: 117px;
+  background-color: #000;
 }
 
 .sidebar ul {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: auto 0;
+  padding: 0;
   list-style: none;
-  background-color: #000;
 }
 
 .sidebar li {
-  width: 40px;
+  width: 34px;
   height: 34px;
   margin: 10px 0;
   padding: 14px;
@@ -55,6 +67,91 @@ body {
 }
 
 .sidebar img {
-  width: 37px;
-  height: 31px;
+  width: 34px;
+}
+
+.sidebar li .swim-icon,
+.sidebar li .cycling-icon {
+  width: 36px;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 11.42%;
+  right: -9%;
+  width: 140px;
+  transform: rotate(-90deg);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  color: #fff;
+}
+
+.titles h1,
+.titles h2 {
+  display: inline-block;
+  margin: 5px 0;
+  font-size: 48px;
+  font-weight: 500;
+}
+.titles h2 {
+  margin-left: 12px;
+}
+.titles p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.name {
+  color: #ff0000;
+}
+
+/* Component */
+.dailyActivityChart {
+  max-height: 320px;
+  max-width: 835px;
+  padding: 25px 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  background-color: #fbfbfb;
+}
+
+/* Chart */
+.toolTip {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  height: 63px;
+  width: 39px;
+  font-size: 7px;
+  text-align: center;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+  background-color: #e60000;
+}
+
+/* Chart title */
+.dailyActivityChart h3 {
+  margin: 0;
+  padding-left: 32px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Abscissa line */
+.recharts-cartesian-axis-line {
+  stroke: #dedede;
+}
+
+/* Calorie and weight legend */
+.recharts-legend-wrapper {
+  margin-top: -22px;
+}
+
+.main {
+  display: inline-block;
+  padding: 48px 90px 86px 226px;
 }/*# sourceMappingURL=main.css.map */

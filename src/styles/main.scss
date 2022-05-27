@@ -4,3 +4,7 @@
 @use "./components/header";
 @use "./components/navbar";
 @use "./components/sidebar";
+@use "./components/welcome";
+@use "./components/DailyActivityChart";
+
+@use "./pages/dashboard";
