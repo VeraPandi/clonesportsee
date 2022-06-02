@@ -1,5 +1,5 @@
 import React from "react";
-import { PureComponent } from "react";
+import PropTypes from "prop-types";
 import {
    BarChart,
    Bar,
@@ -14,7 +14,7 @@ import {
 const CustomToolTip = ({ active, payload }) => {
    if (active && payload) {
       return (
-         <aside className="toolTip">
+         <aside className="barChart-toolTip">
             <span>{`${payload[0].value}`} kg</span>
             <span>{`${payload[1].value}`} kCal</span>
          </aside>
@@ -28,7 +28,7 @@ const BarsChart = (data) => {
       <div className="bar-chart">
          <h3>Activité quotidienne</h3>
 
-         <ResponsiveContainer width="100%" height="100%" aspect={4}>
+         <ResponsiveContainer width="99%" height="100%" aspect={4}>
             <BarChart
                width={500}
                height={350}
@@ -71,7 +71,7 @@ const BarsChart = (data) => {
                <Legend
                   verticalAlign="top"
                   align="right"
-                  height={36}
+                  height={55}
                   iconType="circle"
                   iconSize="8"
                />
@@ -97,6 +97,15 @@ const BarsChart = (data) => {
          </ResponsiveContainer>
       </div>
    );
+};
+
+CustomToolTip.propTypes = {
+   active: PropTypes.bool,
+   payload: PropTypes.array,
+};
+
+BarsChart.propTypes = {
+   data: PropTypes.array,
 };
 
 export default BarsChart;

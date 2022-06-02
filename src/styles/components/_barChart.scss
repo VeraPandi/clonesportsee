@@ -1,7 +1,8 @@
 /* Component */
 .bar-chart {
-   max-height: 320px;
-   max-width: 835px;
+   display: flow-root;
+   min-width: 0;
+   width: 100%;
    padding: 25px 0;
    border-radius: 5px;
    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
@@ -9,7 +10,7 @@
 }
 
 /* Chart */
-.toolTip {
+.barChart-toolTip {
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
@@ -27,19 +28,55 @@
 
 /* Chart title */
 .bar-chart h3 {
+   width: 30%;
    margin: 0;
    padding-left: 32px;
    font-size: 15px;
    font-weight: 500;
    color: #20253a;
+
+   @media (max-width: 1140px) {
+      width: 100%;
+   }
 }
 
 /* Abscissa line */
-.recharts-cartesian-axis-line {
+.bar-chart .recharts-cartesian-axis-line {
    stroke: #dedede;
 }
 
+/* Abscissa data */
+.bar-chart .recharts-cartesian-axis-ticks {
+   @media (max-width: 1140px) {
+      font-size: 20px;
+   }
+}
+
 /* Calorie and weight legend */
-.recharts-legend-wrapper {
-   margin-top: -22px;
+.bar-chart .recharts-legend-wrapper {
+   margin-top: -27px;
+
+   @media (max-width: 860px) {
+      margin: 10px auto;
+   }
+}
+
+.bar-chart .recharts-legend-wrapper ul li {
+   display: flex;
+}
+
+/* Container sizes and positions */
+.bar-chart .recharts-responsive-container,
+.bar-chart .recharts-wrapper,
+.bar-chart .recharts-surface {
+   display: flex;
+   min-width: 0;
+   width: 100%;
+}
+
+.bar-chart .recharts-surface {
+   position: relative;
+   top: -1px;
+   width: auto;
+   padding: 0 10px;
 }

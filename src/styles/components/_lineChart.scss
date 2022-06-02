@@ -1,0 +1,60 @@
+/* Component */
+.line-chart {
+   position: relative;
+   height: 263px;
+   width: 258px;
+   margin: 30px 0;
+}
+
+/* Chart */
+.line-chart .recharts-surface {
+   height: 263px;
+   width: 258px;
+   border-radius: 5px;
+}
+
+/* Tool tip */
+.lineChart-toolTip {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   justify-items: center;
+   align-items: center;
+   height: 25px;
+   width: 39px;
+   font-size: 8px;
+   font-weight: 500;
+   font-style: normal;
+   text-align: center;
+   background-color: #fff;
+}
+
+/* Chart title */
+.line-chart h3 {
+   z-index: 1;
+   position: absolute;
+   top: 34px;
+   margin: 0 34px;
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 1.5;
+   color: #ffffff;
+   opacity: 0.9;
+}
+
+/* Sizing */
+.line-chart .recharts-cartesian-grid-bg {
+   height: 100%;
+   width: 100%;
+}
+
+.line-chart .recharts-responsive-container {
+   max-height: 263px;
+   max-width: 258px;
+   border-radius: 5px;
+}
+
+.line-chart .recharts-wrapper {
+   height: 263px;
+   width: 258px;
+}

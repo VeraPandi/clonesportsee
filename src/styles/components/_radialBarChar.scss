@@ -1,0 +1,63 @@
+/* Component */
+.radialBar-chart {
+   position: relative;
+   height: 261px;
+   width: 258px;
+   margin: 30px 0;
+   border-radius: 5px;
+   background: #fbfbfb;
+}
+
+.radialBar-chart h3 {
+   font-size: 15px;
+   font-weight: 500;
+   color: #20253a;
+}
+
+/* Chart */
+.radialBar-chart .title {
+   position: absolute;
+   margin: 24px 30px 10px;
+   font-size: 15px;
+   font-weight: 500;
+   color: #20253a;
+}
+
+.radialBar-chart .result {
+   position: absolute;
+   top: 26%;
+   left: 54px;
+   height: 150px;
+   width: 150px;
+   font-size: 16px;
+   font-weight: 500;
+   text-align: center;
+   border-radius: 50%;
+   color: #74798c;
+   background: #ffffff;
+}
+
+.radialBar-chart .score {
+   position: absolute;
+   top: 30px;
+   left: 21px;
+   font-size: 26px;
+   font-weight: 600;
+   color: #282d30;
+}
+
+.radialBar-chart .text {
+   position: absolute;
+   top: 65px;
+   line-height: 1.5;
+}
+
+.radialBar-chart .recharts-wrapper {
+   height: 261px;
+   width: 244px;
+}
+
+.radialBar-chart .recharts-surface {
+   height: 261px;
+   width: 258px;
+}

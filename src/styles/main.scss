@@ -1,11 +1,16 @@
 @use "./base/global";
 
-@use "./components/logo";
-@use "./components/header";
-@use "./components/navbar";
-@use "./components/sidebar";
 @use "./components/welcome";
 @use "./components/barChart";
 @use "./components/card";
+@use "./components/lineChart";
+@use "./components/radarChart";
+@use "./components/radialBarChar";
 
-@use "./pages/dashboard";
+@use "./layout/logo";
+@use "./layout/header";
+@use "./layout/navbar";
+@use "./layout/sidebar";
+
+@use "./pages/profile";
+@use "./pages/notFound";

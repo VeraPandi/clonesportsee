@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Welcome = ({ firstName }) => {
    return (
@@ -8,6 +9,10 @@ const Welcome = ({ firstName }) => {
          <p>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
       </header>
    );
+};
+
+Welcome.propTypes = {
+   firstName: PropTypes.string,
 };
 
 export default Welcome;

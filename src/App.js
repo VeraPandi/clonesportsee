@@ -1,12 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
+import Header from "./components/Header";
+import Profile from "./pages/Profile";
+import NotFound from "./pages/NotFound";
 import "./styles/main.scss";
 
 const App = () => {
    return (
       <Router>
+         <Header />
          <Routes>
-            <Route path="/user/:id" element={<Dashboard />} />
+            <Route path="/user/:id" element={<Profile />} />
+            <Route path="*" element={<NotFound />} />
          </Routes>
       </Router>
    );

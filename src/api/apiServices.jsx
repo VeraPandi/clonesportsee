@@ -3,10 +3,7 @@ import axios from "axios";
 
 export function useData(id) {
    const [user, setUser] = useState([]);
-   const [userInfo, setUserInfo] = useState([]);
-   const [userKeyData, setUserKeyData] = useState([]);
    const [activity, setActivity] = useState([]);
-   const [activitySession, setActivitySession] = useState([]);
    const [average, setAverage] = useState([]);
    const [performance, setPerformance] = useState([]);
 
@@ -25,21 +22,13 @@ export function useData(id) {
       axios.all([getUser, getActivity, getAverage, getPerformance]).then(
          axios.spread((...datas) => {
             const userDatas = datas[0].data.data;
-            const userInfoDatas = userDatas.userInfos;
-            const userKeyDatas = userDatas.keyData;
             const activityDatas = datas[1].data.data;
-            const activitySessionsDatas = activityDatas.sessions;
             const averageDatas = datas[2].data.data;
             const performanceDatas = datas[3].data.data;
             setUser(userDatas);
-            setUserInfo(userInfoDatas);
-            setUserKeyData(userKeyDatas);
             setActivity(activityDatas);
-            setActivitySession(activitySessionsDatas);
             setAverage(averageDatas);
             setPerformance(performanceDatas);
-
-            // console.log(userKeyDatas);
          })
       );
    };
@@ -50,10 +39,7 @@ export function useData(id) {
 
    return {
       user,
-      userInfo,
-      userKeyData,
       activity,
-      activitySession,
       average,
       performance,
    };

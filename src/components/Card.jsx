@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import fire from "../assets/icons/fire.png";
 import chicken from "../assets/icons/chicken.png";
 import apple from "../assets/icons/apple.png";
@@ -48,6 +49,10 @@ const Card = ({ data }) => {
          </div>
       </section>
    );
+};
+
+Card.propTypes = {
+   data: PropTypes.object,
 };
 
 export default Card;

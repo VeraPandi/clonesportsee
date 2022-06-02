@@ -1,0 +1,46 @@
+.profile {
+   position: relative;
+}
+
+.main {
+   display: flex;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 48px 90px 20px 109px;
+}
+
+.items {
+   display: grid;
+   grid-template-columns: auto 258px;
+   gap: 31px;
+
+   @media (max-width: 1440px) {
+      grid-template-columns: auto;
+   }
+}
+
+.charts {
+   width: 100%;
+   min-width: 0;
+}
+
+.small-charts {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+   @media (max-width: 1440px) {
+      justify-content: space-between;
+      gap: 30px;
+   }
+
+   @media (max-width: 1151px) {
+      justify-content: space-evenly;
+      gap: 30px;
+   }
+}

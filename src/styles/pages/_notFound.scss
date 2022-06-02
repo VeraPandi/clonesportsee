@@ -1,0 +1,23 @@
+.notFound {
+   position: relative;
+}
+
+.notFound-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+
+.error-code {
+   font-size: 100px;
+   font-weight: 500;
+   color: #f00;
+}
+
+.error-message {
+   margin: 50px;
+   text-align: center;
+   font-weight: 400;
+}
