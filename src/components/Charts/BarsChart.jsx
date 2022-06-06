@@ -11,6 +11,13 @@ import {
    ResponsiveContainer,
 } from "recharts";
 
+/**
+ * Display the user's weight and calories on hover
+ * @property {boolean} active - If "true", tooltip appears on hover
+ * @property {array} payload - Documents the "calories" and "kilogram" properties
+ * @return {JSX.Element} - If active and payload are true, returns a tooltip
+ */
+
 const CustomToolTip = ({ active, payload }) => {
    if (active && payload) {
       return (
@@ -22,6 +29,15 @@ const CustomToolTip = ({ active, payload }) => {
    }
    return null;
 };
+
+/**
+ * Display daily user activity as a chart
+ * @param {array} data - User data
+ * @property {number} day - Returns the day of the month
+ * @property {number} kilogram - User weight
+ * @property {number} calories - Calories burned by user
+ * @return {JSX.Element} - Returns a chart
+ */
 
 const BarsChart = (data) => {
    return (

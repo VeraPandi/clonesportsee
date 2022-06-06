@@ -7,9 +7,16 @@ import {
    PolarAngleAxis,
 } from "recharts";
 
+/**
+ * Displays the average user score in a chart
+ * @property {array} data - User data
+ * @constant {number} score - User score set as an integer
+ * @constant {array} integerScore - User score to display
+ * @return {JSX.Element} - Returns a chart
+ */
+
 const RadialsBarChart = ({ data }) => {
    const score = (data.todayScore || data.score) * 100;
-
    const integerScore = [{ value: score }];
 
    return (

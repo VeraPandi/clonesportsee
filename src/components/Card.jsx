@@ -5,6 +5,16 @@ import chicken from "../assets/icons/chicken.png";
 import apple from "../assets/icons/apple.png";
 import cheeseburger from "../assets/icons/cheeseburger.png";
 
+/**
+ * Displays key user info in cards
+ * @property {objet} data - User data
+ * @property {number} data.calorieCount - User calorie count
+ * @property {number} data.proteinCount - User protein count
+ * @property {number} data.carbohydrateCount - User carbohydrate count
+ * @property {number} data.lipidCount - User lipid count
+ * @return {JSX.Element} - Returns cards
+ */
+
 const Card = ({ data }) => {
    return (
       <section className="cards-container">

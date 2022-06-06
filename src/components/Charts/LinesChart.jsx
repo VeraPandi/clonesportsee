@@ -10,6 +10,13 @@ import {
    ResponsiveContainer,
 } from "recharts";
 
+/**
+ * Display user session duration on hover
+ * @property {boolean} active - If "true", tooltip appears on hover
+ * @property {array} payload - Documents the "day" and "sessionLength" properties
+ * @return {JSX.Element} - If active and payload are true, returns a tooltip
+ */
+
 const CustomToolTip = ({ active, payload }) => {
    if (active && payload) {
       return (
@@ -20,6 +27,12 @@ const CustomToolTip = ({ active, payload }) => {
    }
    return null;
 };
+
+/**
+ * Display a background when targeting a session on the chart
+ * @property {array} points - Position of a session on the chart line
+ * @return {JSX.Element} - Returns a background
+ */
 
 const CustomHover = ({ points }) => {
    return (
@@ -32,6 +45,15 @@ const CustomHover = ({ points }) => {
       />
    );
 };
+
+/**
+ * Display the average duration of user sessions as a chart
+ * @param {array} data - User data
+ * @constant {object} daysToString - Days of the week defined in string
+ * @constant {string} days - Days of the week
+ * @property {number} sessionLength - Session duration
+ * @return {JSX.Element} - Returns a chart
+ */
 
 const LinesChart = (data) => {
    const daysToString = {

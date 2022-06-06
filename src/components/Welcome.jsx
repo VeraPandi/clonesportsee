@@ -1,6 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+/**
+ * Displays a welcome message on the page
+ * @property {string} firstName - User's first name
+ * @return {JSX.Element}
+ */
+
 const Welcome = ({ firstName }) => {
    return (
       <header className="titles">

@@ -9,6 +9,14 @@ import {
    ResponsiveContainer,
 } from "recharts";
 
+/**
+ * Displays user performance in a chart
+ * @property {array} dataValue - User performance value
+ * @constant {object} typesInFrench - Types of performance defined in French
+ * @property {string} types - Types of performance to display
+ * @return {JSX.Element} - Returns a chart
+ */
+
 const RadarsChart = ({ dataValue }) => {
    const typesInFrench = {
       1: "Cardio",
