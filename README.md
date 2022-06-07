@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+[![forthebadge](https://img.shields.io/badge/Made%20with-Create%20React%20App-%2361dafb)](https://reactjs.org/docs/create-a-new-react-app.html) [![forthebadge](https://img.shields.io/badge/Use-Recharts-%2322b5bf)](https://recharts.org/en-US/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sportsee
 
-## Available Scripts
+Sportsee is an application for monitoring your sports activity.
 
-In the project directory, you can run:
+## Achievement
 
-### `npm start`
+See the project online: [Demo](https://verapandi.github.io/sportsee/user/18)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+By default, you are sent to the user's profile with identifier n°18. If you want to see another user's profile, then change the url: `user/18` to `user/12`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Resources:
 
-### `npm test`
+> [Model](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1)  
+> [User stories](https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+# Installation guide
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this guide, we will install the back-end and front-end of this project. And, let's create a port for each.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-  [![forthebadge](https://img.shields.io/badge/NodeJS-version%2012.18-%23026e00)](https://nodejs.org/en/)
+-  [![forthebadge](https://img.shields.io/badge/-Yarn-%232188b6)](https://yarnpkg.com/getting-started/usage)
 
-### `npm run eject`
+## Step 1: Install the backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+First, you need to get the back-end used in this project.
+Go to this link and clone the back-end: https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Step 2: Launch the back-end
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Next, open the back-end folder.
+In the terminal, use the commands:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+yarn
+```
 
-## Learn More
+Then,
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+yarn dev
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Step 3: Install the front-end
 
-### Code Splitting
+Now you need to get the front-end used in this project.
+Clone this repository: https://github.com/VeraPandi/sportsee
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Step 4: Launch the front-end
 
-### Analyzing the Bundle Size
+Open the front-end folder.
+In the terminal, navigate to the back-end folder directory with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+cd P9-front-end-dashboard-master
+```
 
-### Making a Progressive Web App
+Then use the command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+yarn dev
+```
 
-### Advanced Configuration
+## Step 5: Get back-end and front-end ports
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+By default, the backend port is: http://localhost:3000
 
-### Deployment
+If you want to get a front-end port different from the back-end port, use the following command in the terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+yarn start
+```
 
-### `npm run build` fails to minify
+Then,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+y
+```
+
+User profile page with identifier n°18: [User 18](http://localhost:3001/sportsee/user/18)  
+User profile page with identifier n°12: [User 12](http://localhost:3001/sportsee/user/12)
+
+If you want to switch from one user to another, just change in the url: `user/18` , to `user/12`
