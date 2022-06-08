@@ -5,15 +5,15 @@ import {
    USER_PERFORMANCE,
 } from "./mocks.js";
 
-export const getMockedUserInfo = (id) => {
-   const info = USER_MAIN_DATA.filter(
+const getMockedUserInfo = (id) => {
+   const user = USER_MAIN_DATA.filter(
       (element) => element.id === Number(id)
    ).shift();
 
-   return info;
+   return user;
 };
 
-export const getMockedUserActivity = (id) => {
+const getMockedUserActivity = (id) => {
    const activity = USER_ACTIVITY.filter(
       (element) => element.userId === Number(id)
    ).shift();
@@ -21,7 +21,7 @@ export const getMockedUserActivity = (id) => {
    return activity;
 };
 
-export const getMockedUserAverage = (id) => {
+const getMockedUserAverage = (id) => {
    const average = USER_AVERAGE_SESSIONS.filter(
       (element) => element.userId === Number(id)
    ).shift();
@@ -29,10 +29,36 @@ export const getMockedUserAverage = (id) => {
    return average;
 };
 
-export const getMockedUserPerformance = (id) => {
+const getMockedUserPerformance = (id) => {
    const performance = USER_PERFORMANCE.filter(
       (element) => element.userId === Number(id)
    ).shift();
 
    return performance;
 };
+
+/**
+ * Function returning the mocked datas of the user's sports activity
+ * @param {number} id - User page id
+ * @const {object} user - User identity information and user nutritional values
+ * @const {object} activity - Weight and calories burned each day
+ * @const {object} average - Duration of daily activity sessions
+ * @const {object} performance - Values ​​of each type of activity
+ * @return {object} - All user datas
+ */
+
+const mockedDatas = (id) => {
+   const user = getMockedUserInfo(id);
+   const activity = getMockedUserActivity(id);
+   const average = getMockedUserAverage(id);
+   const performance = getMockedUserPerformance(id);
+
+   return {
+      user,
+      activity,
+      average,
+      performance,
+   };
+};
+
+export default mockedDatas;

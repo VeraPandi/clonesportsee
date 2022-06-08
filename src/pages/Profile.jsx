@@ -1,5 +1,6 @@
 import React from "react";
-// import { useData } from "../api/apiServices";
+import { useData } from "../api/apiServices";
+import mockedDatas from "../api/mocks/mockServices";
 import { useParams } from "react-router-dom";
 import Welcome from "../components/Welcome";
 import Sidebar from "../components/Sidebar";
@@ -9,21 +10,10 @@ import LinesChart from "../components/Charts/LinesChart";
 import RadarsChart from "../components/Charts/RadarsChart";
 import RadialsBarChart from "../components/Charts/RadialsBarChart";
 
-// -------------------------------------
-// Import mocked data
-// -------------------------------------
-import {
-   getMockedUserInfo,
-   getMockedUserActivity,
-   getMockedUserAverage,
-   getMockedUserPerformance,
-} from "../api/mocks/mockServices";
-// -------------------------------------
-
 /**
  * Displays a profile page containing the user's profile charts
  * @const {number} id - User page id
- * @const {object} datas - Object returned after fetch and containing all user datas
+ * @const {object} datas - All user datas
  * @const {object} user - Contains user data: id, keyData, score, userInfos
  * @const {object} userInfos - User identity information (firstname, lastname, age)
  * @const {object} nutritionalValues - User nutritional values
@@ -36,39 +26,22 @@ import {
 const Profile = () => {
    const { id } = useParams();
 
-   //
-
    // -----------------------------------------------------
    // Displays API data (comes from "apiServices" file)
-   // -----------------------------------------------------
-   //    const datas = useData(id);
+   const datas = useData(id);
+   //    console.log(datas);
 
-   //    const user = datas.user;
-   //    const userInfos = datas.user.userInfos;
-   //    const nutritionalValues = datas.user.keyData;
-   //    const dailyActivity = datas.activity.sessions;
-   //    const dailyActivityTime = datas.average.sessions;
-   //    const activityTypeValues = datas.performance.data;
-   // -----------------------------------------------------
-
-   // -----------------------------------------------------
    // Displays mocked data (comes from "mockServices" file)
-   // -----------------------------------------------------
-   const mockedUser = getMockedUserInfo(id);
-   const mockedActivity = getMockedUserActivity(id);
-   const mockedAverage = getMockedUserAverage(id);
-   const mockedPerformance = getMockedUserPerformance(id);
-
-   const user = mockedUser;
-   const userInfos = mockedUser.userInfos;
-   const nutritionalValues = mockedUser.keyData;
-   const dailyActivity = mockedActivity.sessions;
-   const dailyActivityTime = mockedAverage.sessions;
-   const typeActivity = mockedPerformance.kind;
-   const activityTypeValues = mockedPerformance.data;
+   //    const datas = mockedDatas(id);
+   //    console.log(datas);
    // -----------------------------------------------------
 
-   //
+   const user = datas.user;
+   const userInfos = datas.user.userInfos;
+   const nutritionalValues = datas.user.keyData;
+   const dailyActivity = datas.activity.sessions;
+   const dailyActivityTime = datas.average.sessions;
+   const activityTypeValues = datas.performance.data;
 
    if (user && dailyActivity) {
       const dailyActivityArray = dailyActivity.map((element) => element);

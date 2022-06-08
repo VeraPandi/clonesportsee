@@ -82,7 +82,11 @@ Then,
 y
 ```
 
-User profile page with identifier n°18: [User 18](http://localhost:3001/sportsee/user/18)  
-User profile page with identifier n°12: [User 12](http://localhost:3001/sportsee/user/12)
+## Use the app
+
+Go to a user profile:
+
+-  User profile page with identifier n°18: [User 18](http://localhost:3001/sportsee/user/18)
+-  User profile page with identifier n°12: [User 12](http://localhost:3001/sportsee/user/12)
 
 If you want to switch from one user to another, just change in the url: `user/18` , to `user/12`
