@@ -28,11 +28,11 @@ const Profile = () => {
 
    // -----------------------------------------------------
    // Displays API data (comes from "apiServices" file)
-   const datas = useData(id);
+   //    const datas = useData(id);
    //    console.log(datas);
 
    // Displays mocked data (comes from "mockServices" file)
-   //    const datas = mockedDatas(id);
+   const datas = mockedDatas(id);
    //    console.log(datas);
    // -----------------------------------------------------
 
