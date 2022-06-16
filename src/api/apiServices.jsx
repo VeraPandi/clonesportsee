@@ -19,7 +19,7 @@ export function useData(id) {
    const [isLoading, setIsLoading] = useState(false);
    const [isError, setIsError] = useState(false);
 
-   const fetchData = () => {
+   useEffect(() => {
       setIsError(false);
       setIsLoading(true);
 
@@ -35,7 +35,7 @@ export function useData(id) {
             `http://localhost:3000/user/${id}/performance`
          );
 
-         axios.all([getUser, getActivity, getAverage, getPerformance]).then(
+         Promise.all([getUser, getActivity, getAverage, getPerformance]).then(
             axios.spread((...datas) => {
                const userDatas = datas[0].data.data;
                const activityDatas = datas[1].data.data;
@@ -51,10 +51,6 @@ export function useData(id) {
          setIsError(true);
       }
       setIsLoading(false);
-   };
-
-   useEffect(() => {
-      fetchData();
    }, []);
 
    return {
