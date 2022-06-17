@@ -1,6 +1,6 @@
 import React from "react";
-import { useData } from "../api/apiServices";
-// import mockedDatas from "../api/mocks/mockServices";
+// import { useData } from "../api/apiServices";
+import mockedDatas from "../api/mocks/mockServices";
 import { useParams } from "react-router-dom";
 import Welcome from "../components/Welcome";
 import Sidebar from "../components/Sidebar";
@@ -12,7 +12,7 @@ import RadialsBarChart from "../components/Charts/RadialsBarChart";
 
 /**
  * Displays a profile page containing the user's profile charts
- * @const {number} id - User page id
+ * @property {string} id - User page id
  * @const {object} datas - All user datas
  * @const {object} user - Contains user data: id, keyData, score, userInfos
  * @const {object} userInfos - User identity information (firstname, lastname, age)
@@ -28,11 +28,11 @@ const Profile = () => {
 
    // -----------------------------------------------------
    // Displays API data (comes from "apiServices" file)
-   const datas = useData(id);
+   //    const datas = useData(id);
    //    console.log(datas);
 
    // Displays mocked data (comes from "mockServices" file)
-   //    const datas = mockedDatas(id);
+   const datas = mockedDatas(id);
    //    console.log(datas);
    // -----------------------------------------------------
 

@@ -32,14 +32,16 @@ const CustomToolTip = ({ active, payload }) => {
 
 /**
  * Display daily user activity as a chart
- * @param {array} data - User data
- * @property {number} day - Returns the day of the month
+ * @param {object} data - User data
+ * @constant {string} days - Returns the day of the month
  * @property {number} kilogram - User weight
  * @property {number} calories - Calories burned by user
  * @return {JSX.Element} - Returns a chart
  */
 
-const BarsChart = (data) => {
+const BarsChart = ({ data }) => {
+   const days = (day) => new Date(day).getDate().toString();
+
    return (
       <div className="bar-chart">
          <h3>Activité quotidienne</h3>
@@ -48,7 +50,7 @@ const BarsChart = (data) => {
             <BarChart
                width={500}
                height={350}
-               data={data.data}
+               data={data}
                margin={{
                   top: 5,
                   right: 30,
@@ -65,7 +67,7 @@ const BarsChart = (data) => {
                   dataKey="day"
                   tickLine={false}
                   tick={{ fill: "#9B9EAC", dy: 12 }}
-                  tickFormatter={(day) => new Date(day).getDate()}
+                  tickFormatter={days}
                />
                <YAxis
                   tickLine={false}
@@ -89,7 +91,7 @@ const BarsChart = (data) => {
                   align="right"
                   height={55}
                   iconType="circle"
-                  iconSize="8"
+                  iconSize={8}
                />
                <Bar
                   yAxisId="kilogram"

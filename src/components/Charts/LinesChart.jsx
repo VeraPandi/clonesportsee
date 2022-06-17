@@ -48,14 +48,14 @@ const CustomHover = ({ points }) => {
 
 /**
  * Display the average duration of user sessions as a chart
- * @param {array} data - User data
+ * @param {object} data - User data
  * @constant {object} daysToString - Days of the week defined in string
  * @constant {string} days - Days of the week
  * @property {number} sessionLength - Session duration
  * @return {JSX.Element} - Returns a chart
  */
 
-const LinesChart = (data) => {
+const LinesChart = ({ data }) => {
    const daysToString = {
       1: "L",
       2: "M",
@@ -72,7 +72,7 @@ const LinesChart = (data) => {
          <h3>Durée moyenne des sessions</h3>
          <ResponsiveContainer width="100%" height="100%">
             <LineChart
-               data={data.data}
+               data={data}
                margin={{
                   top: 0,
                   right: 0,
@@ -114,7 +114,7 @@ const LinesChart = (data) => {
                   strokeOpacity={0.8}
                   activeDot={{
                      r: 3,
-                     background: "#FFFFFF",
+                     fill: "#FFFFFF",
                      strokeOpacity: "0.6",
                      strokeWidth: "10",
                   }}

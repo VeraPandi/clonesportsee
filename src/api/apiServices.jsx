@@ -51,7 +51,7 @@ export function useData(id) {
          setIsError(true);
       }
       setIsLoading(false);
-   }, []);
+   }, [id]);
 
    return {
       user,

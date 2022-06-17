@@ -39,7 +39,7 @@ const getMockedUserPerformance = (id) => {
 
 /**
  * Function returning the mocked datas of the user's sports activity
- * @param {number} id - User page id
+ * @param {string} id - User page id
  * @const {object} user - User identity information and user nutritional values
  * @const {object} activity - Weight and calories burned each day
  * @const {object} average - Duration of daily activity sessions
